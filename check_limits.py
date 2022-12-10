@@ -1,4 +1,4 @@
-from check_battery_limit import battery_is_ok, battery_is_ok_for_soc_charge_rate
+from battery_check import battery_is_ok, battery_is_ok_for_soc_charge_rate
 from battery_check_thresholds import temperature_beyond_limit, soc_beyond_limit, charge_rate_beyond_limit
 
 TEMPERATURE_THRESHOLD_TEST_VALUES = {"0":[0,1,45], "1":[-1,46]}  # assert temperature < 0, ==0, > 0, == 45, > 45 

@@ -1,9 +1,9 @@
-def checkMinExcluded(value, threshold):
+def thresholdMinExcluded(value, threshold):
     if value < threshold:
         return True
     return False
 
-def checkMaxExcluded(value, threshold):
+def thresholdMaxExcluded(value, threshold):
     if value > threshold:
         return True
     return False
