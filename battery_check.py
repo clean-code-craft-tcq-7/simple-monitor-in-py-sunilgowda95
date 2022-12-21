@@ -1,11 +1,7 @@
-from battery_check_thresholds import temperature_beyond_limit, soc_beyond_limit, charge_rate_beyond_limit
+from battery_check_breach import check_breach
+from battery_check_warning import check_warning
 
-def battery_is_ok_for_soc_charge_rate(soc, charge_rate):
-  if soc_beyond_limit(soc):
-    return False
-  return not charge_rate_beyond_limit(charge_rate)
-    
-def battery_is_ok(temperature, soc, charge_rate):
-  if temperature_beyond_limit(temperature):
-    return False
-  return battery_is_ok_for_soc_charge_rate(soc, charge_rate) 
+def battery_is_ok(*args):
+  if not check_breach(*args):
+    return False # battery state is under warning
+  return check_warning(*args)
