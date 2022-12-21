@@ -56,3 +56,10 @@ Shorten the Semantic distance
 - Functional to express relation between input and output
 - Object oriented to encapsulate state with actions
 - Apect oriented to capture repeating aspects
+
+## Extending Functionality
+
+Code is Extended to include following functionalities
+
+- Early Warning
+- Support a language in addition to English
